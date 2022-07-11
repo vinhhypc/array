@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="number">
+    <input type="button" value="Add" onclick="AddNum()">
+    <button onclick="Show()">Display</button>
+    <script>
+        let x = 0;
+        let array = Array();
+        //xay dung ham de gan 1 phan tu//
+        function AddNum(){
+            array[x] = document.getElementById("number").value; //lay gia tri//
+            alert('Element '+ array[x] +' added at index' + x); //thong bao phan tu duoc them//
+            x++;    //tang gia tri cua mang khi duoc them//
+            document.getElementById("number").value = "";
+        }
+        //xay dung ham de hien thi phan tu//
+        function Show(){
+            let hr ="<hr/>";
+            for (let i = 0; i< array.length; i++){
+                hr += "Element" + i + "=" + array[i] + "<br/>";
+            }
+            document.write(hr);
+        }
+    </script>
+</body>
+</html>
