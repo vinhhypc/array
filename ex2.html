@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="word">
+    <button onclick="Tran()">Tran</button>
+</body>
+</html>
+<script>
+    function Tran(){
+        let eng = ['Apple', 'Banana','Orange'];
+        let vie = ['Tao','Chuoi','Cam'];
+        let input = document.getElementById("word").value;
+        let position_eng = 0;//khoi tao bien vi tri cua phan tu trong eng;
+        let result ="";
+        for (let i= 0; i<eng.length;i++){
+            if (input == eng[i]){
+                position_eng =i;
+                for (let j=0;j <vie.length;j++){
+                    if (position_eng ==j){
+                        result = vie[j];
+                    }
+                }
+            }
+        }
+        alert(result);
+    }
+</script>
